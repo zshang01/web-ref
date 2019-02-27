@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/web-referral-app');
+mongoose.connect(mongodb://admin:admin1@ds255005.mlab.com:55005/web-ref-app);
 const Schema = mongoose.Schema;
 
 

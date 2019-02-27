@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const passport = require('passport');
-
+const mongoose = require('mongoose');
 
 
 var app = express();
@@ -27,6 +27,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+
+const db = require('./config/keys').mongoURI;
+mongoose
+	.connect(db)
+	.then(() => console.log('MongoDB Connected'))
+	.catch(err => console.log(err));
 
 // passport
 app.use(passport.initialize());
