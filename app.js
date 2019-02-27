@@ -28,11 +28,11 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 
-// const db = require('./config/keys').mongoURI;
-// mongoose
-// 	.connect(db)
-// 	.then(() => console.log('MongoDB Connected'))
-// 	.catch(err => console.log(err));
+const db = require('./config/keys').mongoURI;
+mongoose
+	.connect(db)
+	.then(() => console.log('MongoDB Connected'))
+	.catch(err => console.log(err));
 
 // passport
 app.use(passport.initialize());
