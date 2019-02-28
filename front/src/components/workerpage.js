@@ -38,13 +38,20 @@ class workerpage extends Component {
 		this.setState({num: index})
 		
 	}
+
+	
 	renderStudnets(){
 		return this.state.students.map((student) =>
 			<Card key={student.name} 
 		        onSwipeRight={this.onSwipeRight.bind(this)}
 		        onSwipeLeft={this.onSwipeLeft.bind(this)}>
+		        <h1>{student.name}</h1>
+		        
+		        
+		       
+
 				<img src={require('../img/profile.png')} className='card-image'/>
-				<CardTitle>Name: {student.name}</CardTitle>
+		        <CardTitle>Name: {student.name}</CardTitle>
 		        
 		        <CardText> this is the information of {student.name}
 		        <ul>
@@ -53,10 +60,7 @@ class workerpage extends Component {
 		          <li>Bio: {student.bio}</li>
 		        </ul>
 		        </CardText>
-		        <div>
-					
-					<Button onClickPass={this.onClickPass}>Flip to See Bio</Button>
-		        </div>
+		        
 
 	      	</Card>
 			)
@@ -67,6 +71,8 @@ class workerpage extends Component {
         		<h1>Students</h1>
         		<CardWrapper>{this.renderStudnets()}</CardWrapper>       
       		</div>
+
+
 		);
 	}
 	

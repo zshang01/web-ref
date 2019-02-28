@@ -3,7 +3,7 @@ import { Card, CardWrapper } from 'react-swipeable-cards';
 import { CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button } from 'reactstrap';
 
-import ReactCardFlip from 'react-card-flip';
+
 import '../studentpage.css';
 
 class studentpage extends Component {
@@ -72,11 +72,7 @@ class studentpage extends Component {
 				          <li>Company: {worker.company}</li>
 				        </ul>
 				        </CardText>
-				        <div>
-							
-							<Button onClickPass={this.onClickPass}>Flip to See Bio</Button>
-				        </div>
-		        	
+				        
 		        	
 			        
 		        </CardBody>
