@@ -17,10 +17,9 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <Provider store={ store}>
         <Router>
           <div className="App">
-            <Route exact path = "/" component = { Landing } />
+            <Route exact path = "/" component = {Landing} />
             <div className='container'>
               <Route exact path="/Register" component = {Register} />
               <Route exact path="/Login" component = {Login} />
@@ -31,7 +30,6 @@ class App extends Component {
             </div>
           </div>
         </Router>
-      </Provider>
     );
   }
 }
