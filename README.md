@@ -26,8 +26,8 @@ Then run npm start
 [web-page](https://secure-earth-49982.herokuapp.com/)
 
 ## Screenshots:
-![](images/screen1.png)
-![](images/screen2.png)
+![](screenshot/screenshot1.png)
+![](screenshot/screenshot2.png)
 ![](images/screen3.png)
 ![](images/screen4.png)
 
