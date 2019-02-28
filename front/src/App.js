@@ -8,8 +8,6 @@ import Workerpage from './components/workerpage';
 import Studentregister from './components/studentregister';
 import Workerregister from './components/workerregister';
 import Login from './components/auth/Login';
-import { Provider } from 'react-redux';
-import store from './store'
 
 import './App.css';
 
