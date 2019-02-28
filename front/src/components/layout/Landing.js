@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 class Landing extends Component {
   render() {
     return (
-      <div className="landing">
+      <div className="landing" >
         <div className="dark-overlay landing-inner text-light">
           <div className="container">
             <div className="row">
@@ -13,6 +13,7 @@ class Landing extends Component {
                 <p className="lead">
                   {' '}
                   Help Student or Ask Referral</p>
+                  
                   <hr />
                 <Link to="/Register" className='btn btn-lg btn-info mr-2'>Sign up</Link>
                 <Link to="/Login" className='btn btn-lg btn-info mr-2'>Log in</Link>

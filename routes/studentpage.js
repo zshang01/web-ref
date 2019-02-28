@@ -27,7 +27,7 @@ router.post('/register', (req, res)=>{
 		if(req.body.name) studentprofile.name = req.body.name;
 		if(req.body.email) studentprofile.email = req.body.email;
 		if(req.body.location) studentprofile.location = req.body.location;
-		//if(typeof req.body.skills !== 'undefined') studentprofile.skills = req.body.skills.split(',');
+		if(req.body.skills) studentprofile.skills = req.body.skills;
 		if(req.body.bio) studentprofile.bio = req.body.bio;
 		//if(typeof req.body.applied !== 'undefined') studentprofile.applied = req.body.applied.split(',');
 		console.log(emailkey)

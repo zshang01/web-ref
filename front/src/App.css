@@ -29,8 +29,12 @@ img {
   height: 100%;
 }
 
-.card-form {
+.card-image {
   opacity: 0.9;
+  height: auto;
+  max-height: 250px;
+  width: auto;
+  max-width: 250px;
 }
 
 .latest-profiles-img {

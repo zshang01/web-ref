@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import { Card, CardWrapper } from 'react-swipeable-cards';
+import { CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button } from 'reactstrap';
+
+import ReactCardFlip from 'react-card-flip';
 import '../studentpage.css';
 
 class studentpage extends Component {
@@ -7,20 +11,17 @@ class studentpage extends Component {
 		super();
 			this.state = {
 				workers: [],
-				num: -1
+				num: -1,
+				
 			};
-			
+			this.onClickLike = this.onClickLike.bind(this);
+			this.onClickPass = this.onClickPass.bind(this);
 		};
-
-		
-		
 	componentDidMount(){
 
 	
 		fetch('/studentpage/all')
 			.then((res) =>{
-				//console.log(res);
-				//console.log(res);
 				return res.json();
 			})
 			.then((json) => this.setState({workers: json}))
@@ -41,20 +42,44 @@ class studentpage extends Component {
 		
 	}
 
-	
+	onClickLike(e){
+		let index = this.state.num + 1;
+		this.setState({num: index})
+	}
+
+	onClickPass(e){
+		let index = this.state.num + 1;
+		this.setState({num: index})
+		let curWorker = this.state.workers[this.state.num];
+		alert('worker contact:' + curWorker.email);
+	}
+
 	renderStudnets(){
 		return this.state.workers.map((worker) =>
 			<Card key={worker.name} 
 		        onSwipeRight={this.onSwipeRight.bind(this)}
 		        onSwipeLeft={this.onSwipeLeft.bind(this)}>
-		        <h1>{worker.name}</h1>
-		        
-		        
-		        <ul>
-		          <li> {worker.name}</li>
-		          <li>Company: {worker.company}</li>
-		          
-		        </ul>
+
+		        <CardBody>
+
+
+		        		<img src={require('../img/profile.png')} className='card-image'/>
+				        <CardTitle>Name: {worker.name}</CardTitle>
+				        
+				        <CardText> this is the information of {worker.name}
+				        <ul>
+				          <li>Location: {worker.location}</li>
+				          <li>Company: {worker.company}</li>
+				        </ul>
+				        </CardText>
+				        <div>
+							
+							<Button onClickPass={this.onClickPass}>Flip to See Bio</Button>
+				        </div>
+		        	
+		        	
+			        
+		        </CardBody>
 	      	</Card>
 			)
 	}
