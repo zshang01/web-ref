@@ -8,7 +8,8 @@
     "heroku-postbuild": "cd front && yarn install && yarn build"
   },
   "engines": {
-    "node": "10.15.0"
+    "node": "10.15.0",
+    "yarn": "1.13.0"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
