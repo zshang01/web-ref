@@ -22,15 +22,9 @@ module.exports = function validateLoginInput(data){
 		errors.password = 'password must be 6 - 25';
 	}
 
-	
-
 	if(Validator.isEmpty(data.password)){
 		errors.password = 'password is empty';
 	}
-	
-
-
-
 	return {
 		errors,
 		isValid: isEmpty(errors)
