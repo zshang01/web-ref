@@ -19,8 +19,18 @@ Heroku
 ```
 $ git clone
 In the root folder of the App and install all dependencies using npm install
-Then run npm start
+Then run npm start 
 ```
+////YHuangxu: this command only did not start the frontend as well, maybe need to add commands for frontend?
+```
+cd front
+npm install
+npm start
+```
+////
+
+
+
 
 ## Link
 [web-page](https://secure-earth-49982.herokuapp.com/)
