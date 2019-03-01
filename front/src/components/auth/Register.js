@@ -137,3 +137,6 @@ class Register extends Component {
 }
 
 export default Register;
+
+
+///YHuangxu: I was not able to register successfully, and always got a "wrong" alert with no further instructions. I saw logic at the backend code, please show those on the screen as well.
