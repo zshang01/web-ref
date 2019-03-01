@@ -114,3 +114,7 @@ class Login extends Component {
 }
 
 export default Login;
+
+
+//YHuangxu: I was not able to access the login page either by register or by clicking on "login",
+// but I was able to access after clone the repo, might need some work to fix this issue?
